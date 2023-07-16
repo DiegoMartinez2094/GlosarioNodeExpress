@@ -64,3 +64,81 @@
  * Para ejecutar un archivo solo basta con abrir la terminal y escribir el comando node (nombre del archivo que vas a correr)
  * importante(debe ser un archivo tipo .js)
  */
+
+/**Diferencias de Apis Globales JavaScript en Node
+ * 
+ * En JavaScript, la palabra clave "window" se utiliza en el entorno de un navegador 
+ * web para hacer referencia al objeto global que representa la ventana del navegador 
+ * en Node.js, no existe un objeto "window". En su lugar, Node.js utiliza el objeto "global" como su objeto global proporcionando
+ *  un ámbito global para variables, funciones y objetos en una aplicación de Node.js. A
+ */
+
+/**PROCESS
+ * En Node.js, el objeto process es un objeto global que proporciona información y control sobre el proceso actual en ejecución. Es una instancia de la clase  
+ * EventEmitter, lo que significa que puede emitir y escuchar eventos.
+ */
+
+/**SISTEMA DE MODULOS
+ * 
+ * El sistema de módulos de Node.js se basa en el concepto de módulos, que son unidades de código independientes que encapsulan funcionalidades específicas. 
+ * Cada módulo tiene su propio ámbito y puede exportar funciones, objetos o variables para ser utilizados por otros módulos
+ * 
+ */
+
+/**COMMON JS 
+ * 
+ * Define un formato estandar para la organización y carga de modulos en entornos de ejecucion
+ * caracteristicas principales:
+ * -Sincrono
+ * -Carga bajo demanda
+ * -Exportacion o importacion de modulos
+ * -Resolucion de rutas
+ * -Ambito propio
+ * -modulos incorporados
+ * 
+*/
+
+
+/**QUÉ ES NPM? (node package manager)
+ * 
+ * Es un administrador de paquetes para node.js, permite compartir y reutilizar facilmente el codigo javascript
+ * asi como gestionar las dependencias dee su proyecto, se instala junto con node automaticamente
+ * 
+ * NPM ES PARA:
+ * 
+ * -instalar paquetes(librerias, frameworks)
+ * -gestionar dependencias (con package.json)
+ * -actualizar paquetes
+ * publicar tus propios paquetes
+ * 
+ */
+
+/**EJEMOPLO DE PACKAGE.JSON
+ * 
+ * con el comando en la termina npm init -y
+ * nosgenera el archivo package.json el cual contiene:
+ * {
+  "name": "glosarionodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "glosarioNode.js",
+   "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+ */
+
+/**ES MODULES
+ * 
+ * Es una forma estandar de compartir y organizart codigo javascript
+ * estan diseñados para funcionar tanto en navegadores web como en entornos de servidor
+ * 
+ * caracteristicas:
+ * -Asincronos y basados en promesas
+ * -sintaxis impor/export
+ * 
+ */
