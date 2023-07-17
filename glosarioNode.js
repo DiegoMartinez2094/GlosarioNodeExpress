@@ -139,6 +139,55 @@
  * 
  * caracteristicas:
  * -Asincronos y basados en promesas
- * -sintaxis impor/export
+ * -sintaxis import/export
  * 
+ * En el archivo package.json, agregaremos un nuevo campo llamado "type" con el 
+ *valor "module". Esto permitirá configurar Node.js y decirle que el archivo app.js 
+ *será compatible con los módulos de ECMAScript (ES).
  */
+
+ /*ejemplo de conversor de dolares importando*/
+ 
+import { dolarAeuro, dolarAlibra } from "./conversor.js";
+
+import * as readline from 'node:readline/promises';
+
+import { stdin as input, stdout as output } from 'node:process';
+
+const rl = readline.createInterface({ input, output });
+
+const answer = await  rl.question('Dolares a cambiar: ') ;
+const Answers= Number (answer);
+console.log(dolarAeuro(Answers));
+console.log( dolarAlibra(Answers));
+rl.close();
+
+/**recordar que debemos tener los archivos: package.json, package-lock y node modules 
+ * package.json = npm init -y  (debajo del main poner: "type": "module")
+ * para instalar nodemon = npm i -E -D nodemon (verifica que esté en el package.json)
+*/
+
+/* {
+  "name": "glosarionodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "glosarioNode.js",
+   "type": "module",
+  "scripts": {
+    "dev": "nodemon --quiet ./app.js"    = (esto es para que nodemon coja app.js como archivo principal y lo ejecute, --quiet: es para ver únicamente los resultados de Node.js y evitar ver los mensajes 
+     adicionales de la extensión en la consola al utilizar Nodemon)
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+ */
+/**Ahora puedes iniciar tu aplicación ejecutando el siguiente comando en la 
+terminal: “npm run dev” */
+
+/**QUÉ ES NODEMON?
+ * 
+ * Es una herramienta para aplicaciones Node.js que facilita la tarea de reiniiar automaticamente la aplicaciones Node.js
+ * cuando se detectan cambios la aplicacion reinicia el codigo, todo eso lo facilita nodemon. 
+ * Por otra parte nodemon es compatible con una amplia variedad de proyectos y frameworks basados en node.js
+*/
